@@ -6,6 +6,6 @@ pm2.connect(function(err) {
   setTimeout(function worker() {
     console.log("Restarting app...");
     pm2.restart('app', function() {});
-    setTimeout(worker, 1000);
-  }, 1000);
+    setTimeout(worker, 1000 * 60 * 60);
+  }, 1000 * 60 * 60);
 });
