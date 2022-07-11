@@ -16,7 +16,7 @@ function determineRoles(user, discRoles) {
     }
 
     if (user.visiting_facilities.length == 0) { //if visiting nowhere, can't be a visitor
-        if (['ZMP', 'ZSE', 'ZOA', 'ZLA', 'ZDV'].includes(user.facility))
+        if (['ZMP', 'ZSE', 'ZOA', 'ZLA', 'ZDV', 'ZHQ'].includes(user.facility))
             discRoles.push('ZLC Neighbor')
         else
             discRoles.push('Guest')
@@ -27,7 +27,7 @@ function determineRoles(user, discRoles) {
     //console.log(visitingFacilities)
     if (visitingFacilities.includes('ZLC'))
         discRoles.push('ZLC Visitor')
-    if (['ZMP', 'ZSE', 'ZOA', 'ZLA', 'ZDV'].includes(user.facility))
+    if (['ZMP', 'ZSE', 'ZOA', 'ZLA', 'ZDV', 'ZHQ'].includes(user.facility))
         discRoles.push('ZLC Neighbor')
     else 
         discRoles.push('Guest')
