@@ -4,7 +4,7 @@
   "description": "A Discord bot for the vZLC ARTCC.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "This (potentially) works!"
   },
   "author": "Ben Lindsey",
   "license": "ISC",
