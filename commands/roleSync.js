@@ -17,6 +17,11 @@ function determineRoles(user, discRoles) {
 
     const usaRoles = user.roles.map(roles => roles.role)
     console.log(usaRoles)
+    console.log(usaRoles.includes('ACE'))
+    if (usaRoles.includes('ACE')) {
+        discRoles.push('ACE Team')
+    }
+        
     if (user.visiting_facilities.length == 0) { //if visiting nowhere, can't be a visitor
         if (usaRoles.includes('ACE'))
             discRoles.push('ACE Team')
