@@ -16,8 +16,6 @@ function determineRoles(user, discRoles) {
     }
 
     const usaRoles = user.roles.map(roles => roles.role)
-    console.log(usaRoles)
-    console.log(usaRoles.includes('ACE'))
     if (usaRoles.includes('ACE')) {
         discRoles.push('ACE Team')
     }
