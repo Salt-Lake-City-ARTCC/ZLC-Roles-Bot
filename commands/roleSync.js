@@ -113,7 +113,7 @@ module.exports = {
             }
             //Assign Roles
             let roleStr = '',
-                excluded = ['Training Staff', 'Assistant Staff', 'Staff', 'Nitro Booster', 'Media', 'Event Controller', 'God Save the Queen']
+                excluded = ['Training Staff', 'Assistant Staff', 'Staff', 'TMU', 'Event Staff', 'Nitro Booster', 'Media', 'Event Controller', 'God Save the Queen']
             member.roles.cache.forEach(role => {
                 if (role.id !== guild.roles.everyone.id
                     && excluded.indexOf(role.name) < 0
@@ -134,7 +134,7 @@ module.exports = {
                 .setTitle('Your roles have been assigned.')
                 .setColor(0x5cb85c)
                 .setDescription(roleStr)
-            embed.setFooter(`Your new nickname is: ${newNick}`)
+            embed.setFooter(nickChange ? `Your new nickname is: ${newNick}` : newNick)
             interaction.reply({embeds: [embed]})
           }
         }
