@@ -4,7 +4,7 @@
   "description": "A Discord bot for the vZLC ARTCC.",
   "main": "index.js",
   "scripts": {
-    "test": "yes"
+    "test": "mocha"
   },
   "author": "Ben Lindsey",
   "license": "ISC",
