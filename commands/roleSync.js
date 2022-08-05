@@ -15,7 +15,10 @@ function determineRoles(user, discRoles) {
         return discRoles //EXIT FUNCTION HERE
     }
 
+    const usaRoles = user.roles.map(userRoles => userRoles.roles)
     if (user.visiting_facilities.length == 0) { //if visiting nowhere, can't be a visitor
+        if (usaRoles.includes('ACE'))
+            discRoles.push('ACE Team')
         if (['ZMP', 'ZSE', 'ZOA', 'ZLA', 'ZDV', 'ZHQ'].includes(user.facility))
             discRoles.push('ZLC Neighbor')
         else
