@@ -15,7 +15,7 @@ function determineRoles(user, discRoles) {
         return discRoles //EXIT FUNCTION HERE
     }
 
-    const usaRoles = user.roles.map(userRoles => userRoles.roles)
+    const usaRoles = user.roles.map(roles => roles.role)
     console.log(usaRoles)
     if (user.visiting_facilities.length == 0) { //if visiting nowhere, can't be a visitor
         if (usaRoles.includes('ACE'))
